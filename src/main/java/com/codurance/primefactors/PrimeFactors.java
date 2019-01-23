@@ -4,6 +4,6 @@ import java.util.Set;
 
 class PrimeFactors {
     Set<Integer> factorise(int input) {
-        return Set.of(1);
+        return Set.of(input);
     }
 }
