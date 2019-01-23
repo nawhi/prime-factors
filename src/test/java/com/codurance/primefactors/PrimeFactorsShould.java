@@ -16,6 +16,7 @@ class PrimeFactorsShould {
             "1:1",
             "2:2",
             "3:3",
+            "4:2"
     }, delimiter=':')
     void factorise_a_number_into_its_primes(int input, String rawOutput) {
         Set<Integer> expectedOutput = Arrays.stream(rawOutput.split(","))
