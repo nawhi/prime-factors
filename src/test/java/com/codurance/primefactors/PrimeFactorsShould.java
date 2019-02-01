@@ -21,13 +21,15 @@ class PrimeFactorsShould {
 
     private static Stream<Arguments> test_cases() {
         return Stream.of(
-                Arguments.of(1, Set.of(1)),
                 Arguments.of(2, Set.of(2)),
                 Arguments.of(3, Set.of(3)),
                 Arguments.of(5, Set.of(5)),
 
                 Arguments.of(4, Set.of(2)),
-                Arguments.of(8, Set.of(2))
+                Arguments.of(8, Set.of(2)),
+
+                Arguments.of(6, Set.of(3, 2))
+
         );
     }
 }
