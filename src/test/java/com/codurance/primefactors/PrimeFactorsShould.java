@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import static java.util.Collections.emptySet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PrimeFactorsShould {
@@ -21,6 +22,7 @@ class PrimeFactorsShould {
 
     private static Stream<Arguments> test_cases() {
         return Stream.of(
+                Arguments.of(1, emptySet()),
                 Arguments.of(2, Set.of(2)),
                 Arguments.of(3, Set.of(3)),
                 Arguments.of(5, Set.of(5)),
