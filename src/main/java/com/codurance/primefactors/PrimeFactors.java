@@ -12,6 +12,8 @@ class PrimeFactors {
             return emptySet();
         if (input % 2 == 0)
             return union(Set.of(2), factorise(input / 2));
+        if (input % 3 == 0)
+            return union(Set.of(3), factorise(input / 3));
         return Set.of(input);
     }
 
