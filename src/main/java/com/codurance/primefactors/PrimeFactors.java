@@ -10,13 +10,15 @@ class PrimeFactors {
     Set<Integer> factorise(int input) {
         if (input == 1)
             return emptySet();
-        if (input % 2 == 0)
-            return union(Set.of(2), factorise(input / 2));
-        if (input % 3 == 0)
-            return union(Set.of(3), factorise(input / 3));
-        if (input % 5 == 0)
-            return union(Set.of(5), factorise(input / 5));
+        for (int i = input; i > 1; --i) {
+            if (isPrime(i) && input % i == 0)
+                return union(Set.of(i), factorise(input / i));
+        }
         return Set.of(input);
+    }
+
+    private boolean isPrime(int i) {
+        return Set.of(2, 3, 5, 7).contains(i);
     }
 
     private Set<Integer> union(Set<Integer> s1, Set<Integer> s2) {

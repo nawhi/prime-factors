@@ -39,7 +39,8 @@ class PrimeFactorsShould {
                 Arguments.of(18, Set.of(3, 2)),
                 Arguments.of(36, Set.of(3, 2)),
 
-                Arguments.of(25, Set.of(5))
+                Arguments.of(25, Set.of(5)),
+                Arguments.of(49, Set.of(7))
 
         );
     }
