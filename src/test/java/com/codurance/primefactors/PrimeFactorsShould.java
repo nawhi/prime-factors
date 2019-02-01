@@ -19,7 +19,7 @@ class PrimeFactorsShould {
         assertEquals(expectedOutput, actualOutput);
     }
 
-    static Stream<Arguments> test_cases() {
+    private static Stream<Arguments> test_cases() {
         return Stream.of(
                 Arguments.of(1, Set.of(1)),
                 Arguments.of(2, Set.of(2)),
